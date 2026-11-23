@@ -1,0 +1,78 @@
+//persegi panjang
+class Variable {
+    int lebar;
+    int panjang;
+}
+
+public class Belajar {
+    public static void main(String[] args) {
+
+        double luas;
+
+        Variable p = new Variable();
+
+        p.lebar = 10;
+        p.panjang = 20;
+
+        luas = p.panjang * p.lebar;
+
+        System.out.println("Luas persegi panjang : " + luas);
+    }
+}
+//kalia
+class kali
+{
+    double a;
+    double b;
+    
+    void hasil()
+    {
+        System.out.println("Hasil Perkalian = " + (a*b));
+    }
+}
+public class Hasilperkalian 
+{
+   public static void main(String[] args)
+   {
+       kali variabel1, variabel2;
+       variabel1 = new kali ();
+       variabel2 = new kali ();
+       
+       variabel1.a = 3;
+       variabel1.b = 6;
+       
+       variabel2.a = 5;
+       variabel2.b = 10;
+       
+       variabel1.hasil ();
+       variabel2.hasil();
+   }
+}
+
+//konstruktor
+class konstruktor 
+{
+    int panjang;
+    int lebar;
+    
+    konstruktor ()
+    {
+        panjang = 15;
+        lebar = 4;
+    }
+    int luas()
+    {
+        return(panjang*lebar);
+    }
+}
+public class hitung 
+{
+    public static void main(String[] args)
+    {
+        konstruktor k1, k2;
+        k1 = new konstruktor ();
+        k2 = new konstruktor ();
+        
+        System.out.println(" Luas persegi panjang k1 : " +k1.luas());
+        System.out.println("Luas Persegi Panjang k2 : " +k2.luas());
+    }
