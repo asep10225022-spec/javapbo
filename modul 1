@@ -1,0 +1,11 @@
+public class coba 
+{ 
+    public static void main(String[] args)
+    {
+        String name, address;
+        name = " Ujang ";
+        address = " jl. Ujung kulon";
+        System.out.println( " nama : " +name);
+        System.out.println("Alamat : " +address);
+    }
+}
