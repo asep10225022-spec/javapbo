@@ -1,0 +1,78 @@
+public class modul1 {
+
+    // Class untuk perhitungan bangun
+    static class Bangun {
+
+        // Method menghitung volume tabung
+        double volumeTabung(double r, double t) {
+            return Math.PI * r * r * t;
+        }
+
+        // Method menghitung luas persegi panjang
+        double luasPersegiPanjang(double p, double l) {
+            return p * l;
+        }
+
+        // Method menghitung luas trapesium
+        double luasTrapesium(double a, double b, double t) {
+            return (a + b) * t / 2;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        // Membuat object
+        Bangun hitung = new Bangun();
+
+        // Menghitung volume tabung
+        double volume = hitung.volumeTabung(7, 10);
+
+        // Menghitung luas persegi panjang
+        double persegi = hitung.luasPersegiPanjang(10, 5);
+
+        // Menghitung luas trapesium
+        double trapesium = hitung.luasTrapesium(8, 12, 6);
+
+        // Menampilkan hasil
+        System.out.println("Volume Tabung = " + volume);
+        System.out.println("Luas Persegi Panjang = " + persegi);
+        System.out.println("Luas Trapesium = " + trapesium);
+    }
+}
+
+class Tabung {
+
+    double jariJari;
+    double tinggi;
+
+    // Constructor
+    Tabung(double r, double t) {
+        jariJari = r;
+        tinggi = t;
+    }
+
+    // Method menghitung volume
+    double hitungVolume() {
+        return Math.PI *
+               jariJari *
+               jariJari *
+               tinggi;
+    }
+}
+
+public class modul1 {
+
+    public static void main(String[] args) {
+
+        // Membuat object tabung
+        Tabung tabung1 = new Tabung(7, 10);
+
+        System.out.println("=== Volume Tabung ===");
+        System.out.println("Jari-jari = " +
+                           tabung1.jariJari);
+        System.out.println("Tinggi = " +
+                           tabung1.tinggi);
+        System.out.println("Volume Tabung = " +
+                           tabung1.hitungVolume());
+    }
+}
