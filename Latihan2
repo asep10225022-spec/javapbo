@@ -1,0 +1,171 @@
+import java.util.Scanner;
+
+public class modul2 {
+    public static void main(String[] args) {
+
+        // Keliling Lingkaran
+        try (Scanner input = new Scanner(System.in)) {
+            // Keliling Lingkaran
+            System.out.print("Masukkan jari-jari lingkaran: ");
+            double r = input.nextDouble();
+            
+            double keliling = 2 * Math.PI * r;
+            
+            // Luas Trapesium
+            System.out.print("Masukkan sisi sejajar pertama: ");
+            double a = input.nextDouble();
+            
+            System.out.print("Masukkan sisi sejajar kedua: ");
+            double b = input.nextDouble();
+            
+            System.out.print("Masukkan tinggi trapesium: ");
+            double t = input.nextDouble();
+            
+            double luasTrapesium = (a + b) * t / 2;
+            
+            // Luas Permukaan Prisma Segitiga
+            System.out.print("Masukkan alas segitiga: ");
+            double alas = input.nextDouble();
+            
+            System.out.print("Masukkan tinggi segitiga: ");
+            double tinggiSegitiga = input.nextDouble();
+            
+            System.out.print("Masukkan sisi miring segitiga: ");
+            double sisiMiring = input.nextDouble();
+            
+            System.out.print("Masukkan panjang prisma: ");
+            double panjang = input.nextDouble();
+            
+            double luasAlas = alas * tinggiSegitiga / 2;
+            double kelilingAlas = alas + tinggiSegitiga + sisiMiring;
+            
+            double luasPrisma =
+                    2 * luasAlas + kelilingAlas * panjang;
+            
+            // Output
+            System.out.println("\n=== HASIL PERHITUNGAN ===");
+            System.out.println("Keliling Lingkaran = " + keliling);
+            System.out.println("Luas Trapesium = " + luasTrapesium);
+            System.out.println("Luas Prisma Segitiga = " + luasPrisma);
+        }
+    }
+}
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+public class modul2 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader input = new BufferedReader(
+            new InputStreamReader(System.in)
+        );
+        // Keliling Lingkaran
+        System.out.print("Masukkan jari-jari lingkaran: ");
+        double r = Double.parseDouble(input.readLine());
+        double keliling = 2 * Math.PI * r;
+
+        // Luas Trapesium
+        System.out.print("Masukkan sisi sejajar pertama: ");
+        double a = Double.parseDouble(input.readLine());
+        System.out.print("Masukkan sisi sejajar kedua: ");
+        double b = Double.parseDouble(input.readLine());
+        System.out.print("Masukkan tinggi trapesium: ");
+        double t = Double.parseDouble(input.readLine());
+        double luasTrapesium = (a + b) * t / 2;
+
+        // Luas Permukaan Prisma Segitiga
+        System.out.print("Masukkan alas segitiga: ");
+        double alas = Double.parseDouble(input.readLine());
+        System.out.print("Masukkan tinggi segitiga: ");
+        double tinggiSegitiga = Double.parseDouble(input.readLine());
+        System.out.print("Masukkan sisi miring segitiga: ");
+        double sisiMiring = Double.parseDouble(input.readLine());
+        System.out.print("Masukkan panjang prisma: ");
+        double panjang = Double.parseDouble(input.readLine());
+        double luasAlas = alas * tinggiSegitiga / 2;
+        double kelilingAlas = alas + tinggiSegitiga + sisiMiring;
+        double luasPrisma =
+            2 * luasAlas + kelilingAlas * panjang;
+
+        // Output
+        System.out.println("\n=== HASIL PERHITUNGAN ===");
+        System.out.println("Keliling Lingkaran = " + keliling);
+        System.out.println("Luas Trapesium = " + luasTrapesium);
+        System.out.println("Luas Prisma Segitiga = " + luasPrisma);
+    }
+}
+
+import javax.swing.JOptionPane;
+
+public class modul2 {
+    public static void main(String[] args) {
+
+        // Keliling Lingkaran
+        double r = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan jari-jari lingkaran:"
+            )
+        );
+        double keliling = 2 * Math.PI * r;
+
+        // Luas Trapesium
+        double a = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan sisi sejajar pertama:"
+            )
+        );
+        double b = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan sisi sejajar kedua:"
+            )
+        );
+        double t = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan tinggi trapesium:"
+            )
+        );
+        double luasTrapesium = (a + b) * t / 2;
+
+        // Luas Permukaan Prisma Segitiga
+        double alas = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan alas segitiga:"
+            )
+        );
+        double tinggiSegitiga = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan tinggi segitiga:"
+            )
+        );
+
+        double sisiMiring = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan sisi miring segitiga:"
+            )
+        );
+
+        double panjang = Double.parseDouble(
+            JOptionPane.showInputDialog(
+                "Masukkan panjang prisma:"
+            )
+        );
+
+        double luasAlas = alas * tinggiSegitiga / 2;
+        double kelilingAlas = alas + tinggiSegitiga + sisiMiring;
+
+        double luasPrisma =
+            2 * luasAlas + kelilingAlas * panjang;
+
+        // Output
+        JOptionPane.showMessageDialog(
+            null,
+            """
+            HASIL PERHITUNGAN
+            
+            Keliling Lingkaran = """ + keliling +
+            "\nLuas Trapesium = " + luasTrapesium +
+            "\nLuas Prisma Segitiga = " + luasPrisma
+        );
+    }
+}
